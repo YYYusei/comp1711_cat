@@ -143,12 +143,11 @@ int main()
             scanf("%s",&month_spe);
             double bloodIron_specific = 0;
             for (int i = 0; i < counter; i++){
-                if (strstr(month_spe, bloodIron_specific[i].data) ! = NULL){
+                if (strstr(daily_readings[i].date, month_spe) != NULL) {
                     printf("%s - Blood iron: %.1f\n", daily_readings[i].date, daily_readings[i].bloodIron);
                 }
             } 
             fclose(input);
-            break;
             return 0;
 
         case 'F':
